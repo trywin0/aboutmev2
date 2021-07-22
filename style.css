@@ -1,0 +1,287 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: -5px -5px;
+    width: 101%;
+    min-width: 1920px;
+    height: 101%;
+    z-index: -2;
+}
+
+.highlight {
+    transition: all 0.3s;
+}
+
+
+
+.highlight:hover {
+    color: #000;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+
+.screen {
+    filter: blur(0.5px);
+    color: rgba(0, 0, 0, 0.788) !important;
+    font-family: monospace;
+    right: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    min-width: 1920px;
+    height: 101%;
+    z-index: -1;
+}
+
+.monitorcontent {
+    background-color: #000;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    width: 220px;
+    right: 424px;
+    height: 205px;
+    top: 351px;
+    transform-style: preserve-3d;
+
+    transform: rotate(5deg) rotateY(10deg) rotateX(43deg) rotateZ(3deg);
+
+}
+
+.fullmonitor {
+    padding-top: 200px;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    z-index: 10000;
+
+}
+
+.hidetext {
+    animation-name: hide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-delay: 3s;
+}
+
+.moveup {
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    animation-name: pop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-delay: 3.9s;
+
+}
+
+
+.nameoutput {
+    margin-top: -10px;
+
+}
+
+.namebox {
+    color: rgb(180, 180, 180);
+    margin: 100px 100px;
+    font-family: monospace;
+    letter-spacing: 1.5px;
+    z-index: 1000;
+}
+
+
+.namebox h1 {
+    font-size: 40px;
+    text-shadow: 0px 0px 15px rgb(180, 180, 180);
+}
+
+
+.nameinput:focus {
+    outline: none;
+    border: none;
+    color: rgba(211, 211, 211, 0.5);
+    background-color: #000000;
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.nameinput {
+    margin-top: 30px;
+    font-size: 30px;
+    outline: none;
+    background-color: #000;
+    border: none;
+    color: rgba(116, 116, 116, 0.349);
+    font-family: monospace;
+    transition: border-bottom 0.2s, color 0.2s;
+    border-bottom: 2px solid rgba(116, 116, 116, 0.349);
+}
+
+
+/*
+
+body {
+    background: linear-gradient(45deg, #0f0f0f 80%, #444444 100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.wrapper h1 {
+    text-transform: uppercase;
+    transform: translate(-50%, -50%) skew(10deg) rotate(10deg);
+    font-size: 20vw;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    text-rendering: optimizeLegibility;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 4px 6px #000000, 0 0 0 #208fb1, 1px 4px 6px #306977;
+    white-space: nowrap;
+}
+
+.wrapper h1:before {
+    content: attr(data-heading);
+    position: absolute;
+    left: 0;
+    top: -4.8%;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    color: #fbf7f4;
+    transform: translate(1.6vw, 0) skew(-13deg) scale(1, 1.2);
+    z-index: 2;
+    text-shadow: 2px -1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h1:after {
+    content: attr(data-heading);
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #d3cfcc;
+    transform: translate(0vw, 0) skew(13deg) scale(1, 0.8);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+    text-shadow: 2px -1px 6px rgba(0, 0, 0, 0.3);
+}
+*/
+
+.showtext {
+    display: none;
+}
+
+.texteffect {
+    position: relative;
+
+    font-family: 'CoreCircus', sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: white;
+    text-shadow: 1px 1px #188150,
+        2px 2px #188150,
+        3px 3px #188150;
+    -webkit-transition: all 0.12s ease-out;
+    -moz-transition: all 0.12s ease-out;
+    -ms-transition: all 0.12s ease-out;
+    transition: all 0.12s ease-out;
+}
+
+.texteffect:hover {
+    position: relative;
+    top: -3px;
+    left: -3px;
+    text-shadow: 1px 1px #188150,
+        2px 2px #188150,
+        3px 3px #188150,
+        4px 4px #188150,
+        5px 5px #188150,
+        6px 6px #188150;
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+
+        display: none;
+    }
+}
+
+@keyframes pop {
+    from {
+        top: 510px
+    }
+
+    to {
+        top: 100px;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.aboutme {
+    animation-name: fadein;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-delay: 4.9s;
+}
+
+/* * Webfont: CoreCircus by S-Core * URL: http://www.myfonts.com/fonts/s-core/core-circus/regular/ * Copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved. * Licensed pageviews: 10,000 * * Webfont: CoreCircus2DIn by S-Core * URL: http://www.myfonts.com/fonts/s-core/core-circus/in/ * Copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved. * Licensed pageviews: 10,000 */
+@font-face {
+    font-family: 'CoreCircus2DIn';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CoreCircus';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype');
+}
